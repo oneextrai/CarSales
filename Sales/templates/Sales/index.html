@@ -1,0 +1,29 @@
+{% extends './base.html' %}
+{% block content %}
+<div class="search">
+    <div class="filter">
+        <label for="make">Filter by manufacturer</label>
+        <select name="make" id="make">
+            <option value="*">All</option>
+            <option disabled>-------------</option>
+            {% for make in makes %}
+            <option value="{{ make }}">{{ make|title }}</option>
+            {% endfor %}
+        </select>
+    </div>
+</div>
+
+<div class="results">
+    <div class="car_list">
+        {% for car in cars %}
+        <div class="card {{ car.make }}">
+            <img class="card_image" src="{{ car.main_photo }}" alt="{{ car.model }}">
+            <div class="card_details hidden">
+                <p class="car_title">{{ car.make }} {{ car.model }} - {{ car.year }}</p>
+                <a class="view" href="/{{ car.make }}_{{ car.id }}">View</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

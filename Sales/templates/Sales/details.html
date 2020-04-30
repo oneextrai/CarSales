@@ -1,0 +1,64 @@
+{% extends './base.html' %}
+{% load static %}
+
+{% block content %} 
+<script>const photos = [];</script>
+<script>
+    {% for photo in car.photos %}
+    photos.push('{{ photo }}');
+    {% endfor %}
+</script>
+
+<a href="/" style="color:black;">Return to search</a>
+<h1>{{ car.title }}</h1>
+<div class="center">
+    <div class="slideshow">
+        <div class="current_photo">
+            <img class="main_photo" id="0" src="{{ car.main_photo }}" alt="{{ car.make }}">
+        </div>
+        <div class="shownext">
+            <div class="left arrow"><</div>
+            <div class="previews"></div>
+            <div class="right arrow">></div>
+        </div>
+    </div>
+</div>
+
+<div class="content_left">
+    <div class="glane">
+        <h2>{{ car.title }}</h2>
+        <table>
+            <thead>
+                <td><h4>Specifications</h4></td>
+            </thead>
+            <tr>
+                <td>Price</td>
+                <td>{{ car.price }}</td>
+            </tr>
+            <tr>
+                <td>Odometer</td>
+                <td>{{ car.mileage }}</td>
+            </tr>
+            <tr>
+                <td>Body Type</td>
+                <td>{{ car.body_style }}</td>
+            </tr>
+            <tr>
+                <td>Fuel Type</td>
+                <td>{{ car.fuel_type }}</td>
+            </tr>
+        </table>
+    </div>
+    
+</div>
+<div class="content_right">
+    <div class="description">
+        <h4>Description</h4>
+        {{ car.description|linebreaks }}
+    </div>
+</div>
+{% endblock %} 
+
+{% block extra_scripts %}
+<script src="{% static 'js/details.js' %}"></script>
+{% endblock %}

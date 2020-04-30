@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="all">
+    <meta name="author" content="William Weir">
+    <meta name="description" content="CarSales Luxury car landing page template.">
+    <meta name="keywords" content="car;sales;">
+    <meta name="og:url" content>
+    <meta name="og:type" content="template">
+    <meta name="og:title" content="HoverCard">
+    <meta name="og:description" content="CarSales Luxury car landing page template.">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+	
+	{% if title %}
+    	<title>{{ title }} - CarSales</title>
+	{% else %}
+    	<title>CarSales</title>
+	{% endif %}
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header id="normal_header" class="navbar">
+        <div class="left">
+            <ul class="nav_links">
+                <li><a href="/">Modern</a></li>
+                <li><a href="/">Classic</a></li>
+                <li><a href="/">All</a></li>
+            </ul>
+        </div>
+        <h1 class="logo">CarSales</h1>
+        <div class="right">
+            <ul class="nav_links">
+                <li><a href="/">Our Mission</a></li>
+                <li><a href="/">About</a></li>
+                <li><a href="/">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <header class="navbar responsive_header">
+        <div class="logo">
+            <h1>CarSales</h1>
+        </div>
+        <ul class="nav_links">
+            <li><a href="/">Modern</a></li>
+            <li><a href="/">Classic</a></li>
+            <li><a href="/">All</a></li>
+            <li><a href="/">Our Mission</a></li>
+            <li><a href="/">About</a></li>
+            <li><a href="/">Contact</a></li>
+        </ul>
+        <div class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <div class="header_image">
+        {% if header %}
+        <img src="{{ header }}" alt="HeaderImage">
+        {% else %}
+        <img src="https://wallpaperset.com/w/full/8/6/e/396482.jpg" alt="HeaderImage">
+        {% endif %}
+    </div>
+
+    <div class="content">
+		{% block content %}
+		{% endblock %}
+    </div>
+
+    <footer>
+        <p>COPYRIGHT © WILLIAM WEIR - <a target="_blank" href="https://github.com/oneextrai/CarSaleSite">GITHUB</a></p>
+        <div class="socials">
+            <div class="link">F</div>
+            <div class="link">G+</div>
+            <div class="link">IG</div>
+            <div class="link">in</div>
+            <div class="link">Wi</div>
+            <div class="link">Yt</div>
+        </div>
+        <p><a target="_blank" href="/">TERMS OF USE</a></p>
+    </footer>
+    <script src="{% static 'js/app.js' %}"></script>
+    {% block extra_scripts %}
+    {% endblock %}
+</body>
+</html>
