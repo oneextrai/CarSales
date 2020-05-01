@@ -13,7 +13,7 @@
     <meta name="og:title" content="HoverCard">
     <meta name="og:description" content="CarSales Luxury car landing page template.">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
-	
+    
 	{% if title %}
     	<title>{{ title }} - CarSales</title>
 	{% else %}
@@ -21,9 +21,11 @@
 	{% endif %}
 
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% block css %}
+    {% endblock css %}
 </head>
 <body>
-    <header id="normal_header" class="navbar">
+    <header class="navbar normal_header">
         <div class="left">
             <ul class="nav_links">
                 <li><a href="/">Modern</a></li>
