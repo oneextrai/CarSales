@@ -4,7 +4,7 @@ from .models import Car
 def home(request):
     cars = Car.objects.all()
 
-    makes = set([car.make for car in cars])
+    makes = sorted(set([car.make for car in cars]))
 
     final_cars = []
 

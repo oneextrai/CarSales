@@ -13,5 +13,3 @@ class Car(models.Model):
 
     def __str__(self):
         return f"{self.make} {self.model}"
-
-

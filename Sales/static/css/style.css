@@ -57,8 +57,7 @@ a {
 }
 
 .logo {
-    cursor: pointer;
-    color: white;
+    font-size: 3rem;
 }
 
 header {
@@ -67,6 +66,8 @@ header {
     z-index: 2;
     background-color: rgba(0,0,0,0.8);
     min-height: 86px;
+    padding: 12px 25px;
+    margin-bottom: 25px;
 }
 
 .header_image {
@@ -184,10 +185,16 @@ header {
     align-items: center;
 }
 
-.responsive_header a {
+.responsive_header .nav_links a {
     color: white;
     font-size: 1rem;
-    padding-top: 5px;
+    padding-top: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.responsive_header .logo {
+    font-size: 2.4rem;
 }
 
 .active {
@@ -239,7 +246,6 @@ header {
     display: flex;
     align-items: center;
     width: 120px;
-    height: 10vh;
     margin: 30px;
 }
 
@@ -326,6 +332,9 @@ footer p {
     }
     .responsive_header {
         display: flex;
+    }
+    .responsive_header a {
+        width: 100%;
     }
 }
 
