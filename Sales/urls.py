@@ -3,6 +3,7 @@ from . import views
 
 urlpatterns = [
     path('', views.home),
+    # path('update_classic/', views.update_classic),
     re_path(r'_+(.+)', views.details),
-    # path('update/', views.update)
+    # path('update/', views.update),
 ]

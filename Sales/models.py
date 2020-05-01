@@ -10,6 +10,11 @@ class Car(models.Model):
     fuel_type = models.CharField(max_length=25)
     description = models.TextField()
     photos = models.TextField()
+    is_classic = models.BooleanField(default=False)
 
     def __str__(self):
         return f"{self.make} {self.model}"
+
+class Classic(Car):
+    def __str__(self):
+        return f'{self.make} {self.model}'

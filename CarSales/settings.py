@@ -30,6 +30,11 @@ ALLOWED_HOSTS = ['192.168.1.103', '192.168.1.102','localhost','202.53.63.95']
 # Application definition
 
 INSTALLED_APPS = [
+	'Classic.apps.ClassicConfig',
+	'All.apps.AllConfig',
+	'OurMission.apps.OurmissionConfig',
+	'About.apps.AboutConfig',
+	'Contact.apps.ContactConfig',
 	'Sales.apps.SalesConfig',
     'django.contrib.admin',
     'django.contrib.auth',

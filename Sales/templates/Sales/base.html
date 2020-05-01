@@ -20,7 +20,8 @@
     	<title>CarSales</title>
 	{% endif %}
 
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'Sales/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'Sales/css/details.css' %}">
     {% block css %}
     {% endblock css %}
 </head>
@@ -29,16 +30,16 @@
         <div class="left">
             <ul class="nav_links">
                 <li><a href="/">Modern</a></li>
-                <li><a href="/">Classic</a></li>
-                <li><a href="/">All</a></li>
+                <li><a href="/classic">Classic</a></li>
+                <li><a href="/all">All</a></li>
             </ul>
         </div>
         <a href="/" class="logo">CarSales</a>
         <div class="right">
             <ul class="nav_links">
-                <li><a href="/">Our Mission</a></li>
-                <li><a href="/">About</a></li>
-                <li><a href="/">Contact</a></li>
+                <li><a href="/ourmission">Our Mission</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
             </ul>
         </div>
     </header>
@@ -47,11 +48,11 @@
         <a href="/" class="logo">CarSales</a>
         <ul class="nav_links">
             <li><a href="/">Modern</a></li>
-            <li><a href="/">Classic</a></li>
-            <li><a href="/">All</a></li>
-            <li><a href="/">Our Mission</a></li>
-            <li><a href="/">About</a></li>
-            <li><a href="/">Contact</a></li>
+            <li><a href="/classic">Classic</a></li>
+            <li><a href="/all">All</a></li>
+            <li><a href="/ourmission">Our Mission</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
         </ul>
         <div class="burger">
             <span></span>
@@ -85,7 +86,7 @@
         </div>
         <p><a target="_blank" href="/">TERMS OF USE</a></p>
     </footer>
-    <script src="{% static 'js/app.js' %}"></script>
+    <script src="{% static 'Sales/js/app.js' %}"></script>
     {% block extra_scripts %}
     {% endblock %}
 </body>

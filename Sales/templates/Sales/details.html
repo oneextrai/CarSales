@@ -1,10 +1,6 @@
 {% extends './base.html' %}
 {% load static %}
 
-{% block css %}
-<link rel="stylesheet" href="{% static 'css/details.css' %}">
-{% endblock %}
-
 {% block content %} 
 <script>const photos = [];</script>
 <script>
@@ -28,9 +24,10 @@
     </div>
 </div>
 
-<div class="content_left">
-    <div class="glane">
-        <h2>{{ car.title }}</h2>
+<h2>{{ car.title }}</h2>
+
+<div class="split_content">
+    <div class="content_left">
         <table>
             <thead>
                 <td><h4>Specifications</h4></td>
@@ -53,16 +50,15 @@
             </tr>
         </table>
     </div>
-    
-</div>
-<div class="content_right">
-    <div class="description">
-        <h4>Description</h4>
-        {{ car.description|linebreaks }}
+    <div class="content_right">
+        <div class="description">
+            <h4>Description</h4>
+            {{ car.description|linebreaks }}
+        </div>
     </div>
 </div>
 {% endblock %} 
 
 {% block extra_scripts %}
-<script src="{% static 'js/details.js' %}"></script>
+<script src="{% static 'Sales/js/details.js' %}"></script>
 {% endblock %}

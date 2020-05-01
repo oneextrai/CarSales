@@ -27,7 +27,10 @@ window.addEventListener("resize", () => {
 
 searchField.onchange = () => {
     cards.forEach(card => {
-        if (!card.classList.contains(searchField.value.split(' ')[0])) {
+        if (searchField.value == "*") {
+            card.classList.remove("inactive");
+        }
+        else if (!card.classList.contains(searchField.value.split(' ')[0])) {
             console.log(card);
             card.classList.add("inactive");
         }

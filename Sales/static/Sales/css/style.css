@@ -11,6 +11,25 @@
 /**/        text-decoration: none;                                  /**/
 /**/        color: white;                                         /**/
 /**/    }                                                           /**/
+/**/                                                                /**/ 
+/**/    h1 {                                                        /**/       
+/**/        margin: 1rem 0;                                         /**/
+/**/        padding-left: 25px;                                     /**/
+/**/    }                                                           /**/
+/**/                                                                /**/ 
+/**/    h2 {                                                        /**/       
+/**/        margin: 1rem 0;                                         /**/
+/**/        padding-left: 25px;                                     /**/
+/**/    }                                                           /**/
+/**/                                                                /**/
+/**/    h4 {                                                        /**/       
+/**/        font-size: 1.4rem;                                      /**/ 
+/**/        margin: 1rem 0;                                         /**/
+/**/    }                                                           /**/ 
+/**/                                                                /**/
+/**/    .phone a{                                                   /**/        
+/**/        color: black;                                         /**/                  
+/**/    }                                                           /**/
 /**/                                                                /**/
 /**/    .logo {                                                     /**/
 /**/        font-size: 3rem;                                        /**/
@@ -29,8 +48,7 @@
 /**/                                                                /**/                                                                
 /**/    .hidden {                                                   /**/                                                                             
 /**/        opacity: 0;                                             /**/                   
-/**/        pointer-events: none;                                   /**/                             
-/**/        cursor: auto;                                           /**/                     
+/**/        pointer-events: none;                                   /**/                                                
 /**/        transition: all 0.3s ease-in-out;                       /**/                                         
 /**/    }                                                           /**/     
 /**/                                                                /**/    
@@ -49,10 +67,30 @@
 /**/        margin: 10px 0;                                         /**/                       
 /**/        line-height: 1.4rem;                                    /**/                            
 /**/        max-width: 500px;                                       /**/                         
-/**/    }                                                           /**/     
-/**/                                                                /**/    
+/**/    }                                                           /**/ 
+/**/                                                                /**/      
+/**/    .split_content {                                            /**/                   
+/**/        display: flex;                                          /**/                     
+/**/        flex-direction: row;                                    /**/                           
+/**/        font-size: 1.2rem;                                      /**/                         
+/**/    }                                                           /**/   
+/**/                                                                /**/
+/**/    .content_left {                                             /**/
+/**/        margin-right: auto;                                     /**/
+/**/        margin: 0 auto;                                         /**/
+/**/        max-width: 50%;                                         /**/
+/**/        width: 48%;                                             /**/
+/**/    }                                                           /**/
+/**/                                                                /**/
+/**/    .content_right {                                            /**/
+/**/        max-width: 50%;                                         /**/
+/**/        width: 48%;                                             /**/
+/**/    }                                                           /**/    
 /* ------------------------------------------------------------------ */
 
+iframe {
+    max-width: 100%;
+}
 
 /* ------------------------ HEADERS / NAVBAR ------------------------ */
 /**/    .navbar {                                                   /**/                                                                                     
@@ -65,7 +103,8 @@
 /**/    .nav_links {                                                /**/                    
 /**/        display: flex;                                          /**/                          
 /**/        list-style: none;                                       /**/                             
-/**/        color: white;                                         /**/                         
+/**/        color: white;                                         /**/
+/**/        cursor: pointer;                                        /**/
 /**/    }                                                           /**/         
 /**/                                                                /**/        
 /**/    header {                                                    /**/                
@@ -174,7 +213,7 @@
 /**/        height: 25px;                                           /**/                         
 /**/        width: 25px;                                            /**/                        
 /**/        padding-bottom: 5px;                                    /**/                                
-/**/        cursor: pointer;                                        /**/                            
+/**/        cursor: pointer;                                        /**/ 
 /**/    }                                                           /**/         
 /**/                                                                /**/        
 /**/    .burger span {                                              /**/                      
@@ -202,6 +241,75 @@
 /**/                                                                /**/        
 /* ------------------------------------------------------------------ */
 
+/* ------------------------- LISTING PAGES -------------------------- */
+/**/                                                                /**/  
+/**/    .results {                                                  /**/                    
+/**/        display: flex;                                          /**/                            
+/**/        justify-content: center;                                /**/                                        
+/**/        align-items: center;                                    /**/                                    
+/**/    }                                                           /**/            
+/**/                                                                /**/            
+/**/    .car_list {                                                 /**/                    
+/**/        display: flex;                                          /**/                            
+/**/        flex-direction: row;                                    /**/                                    
+/**/        flex-wrap: wrap;                                        /**/                                
+/**/        justify-content: space-evenly;                          /**/                                            
+/**/        max-width: 90%;                                         /**/                            
+/**/    }                                                           /**/            
+/**/                                                                /**/            
+/**/    .card {                                                     /**/                
+/**/        position: relative;                                     /**/                                
+/**/        max-width: 600px;                                       /**/                                
+/**/        width: 32%;                                             /**/                        
+/**/        min-width: 320px;                                       /**/                                
+/**/        height: 30vh;                                           /**/                            
+/**/        margin: 5px 0;                                          /**/                            
+/**/    }                                                           /**/            
+/**/                                                                /**/            
+/**/    .card_image {                                               /**/                        
+/**/        width: 100%;                                            /**/                            
+/**/        height: 100%;                                           /**/                            
+/**/        overflow: hidden;                                       /**/                                
+/**/        object-fit: cover;                                      /**/                                
+/**/        position: relative;                                     /**/                                
+/**/    }                                                           /**/            
+/**/                                                                /**/            
+/**/    .card_details {                                             /**/                        
+/**/        justify-content: center;                                /**/                                        
+/**/        position: absolute;                                     /**/                                
+/**/        top: 0;                                                 /**/                    
+/**/        height: 100%;                                           /**/                            
+/**/        width: 100%;                                            /**/                            
+/**/        background-color: rgba(0,0,0,0.5);                    /**/                                                
+/**/        text-align: center;                                     /**/                                
+/**/        color: white;                                         /**/                            
+/**/        transition: all 0.3s ease-in-out;                       /**/                                                
+/**/        padding-top: 10vh;                                      /**/                                
+/**/    }                                                           /**/            
+/**/                                                                /**/            
+/**/    .card_details a {                                           /**/                            
+/**/        text-decoration: none;                                  /**/                                    
+/**/        color: white;                                         /**/                            
+/**/        border: 1px solid white;                              /**/                                        
+/**/        left: auto;                                             /**/                        
+/**/        right: auto;                                            /**/                            
+/**/        width: fit-content;                                     /**/                                
+/**/        padding: 3px 5px 0 5px;                                 /**/                                    
+/**/    }                                                           /**/            
+/**/                                                                /**/            
+/**/    .search {                                                   /**/                    
+/**/        width: 88%;                                             /**/                        
+/**/        margin: 0 auto;                                         /**/                            
+/**/    }                                                           /**/            
+/**/                                                                /**/            
+/**/    .search .filter {                                           /**/                            
+/**/        display: flex;                                          /**/                            
+/**/        flex-direction: column;                                 /**/                                    
+/**/        min-width: 130px;                                       /**/                                
+/**/    }                                                           /**/            
+/**/                                                                /**/  
+/* ------------------------------------------------------------------ */
+
 /* ----------------------------- MEDIA ------------------------------ */
 /**/    @media screen and (max-width:1024px) {                      /**/
 /**/        .normal_header {                                        /**/
@@ -211,7 +319,25 @@
 /**/            display: flex;                                      /**/
 /**/        }                                                       /**/
 /**/        .responsive_header a {                                  /**/
-/**/            width: 100%;                                        /**/
+/**/            width: 60%;                                         /**/
+/**/        }                                                       /**/
+/**/    }                                                           /**/
+/**/                                                                /**/
+/**/    @media screen and (max-width:768px) {                       /**/
+/**/        .split_content {                                        /**/
+/**/            flex-direction: column;                             /**/
+/**/        }                                                       /**/
+/**/                                                                /**/
+/**/        .content_left {                                         /**/
+/**/            margin: 0 auto;                                     /**/
+/**/            max-width: 100%;                                    /**/     
+/**/            width: 90%;                                         /**/ 
+/**/        }                                                       /**/
+/**/                                                                /**/
+/**/        .content_right {                                        /**/ 
+/**/            margin: 0 auto;                                     /**/
+/**/            max-width: 100%;                                    /**/     
+/**/            width: 90%;                                         /**/ 
 /**/        }                                                       /**/
 /**/    }                                                           /**/
 /**/                                                                /**/
