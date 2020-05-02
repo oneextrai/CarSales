@@ -86,6 +86,10 @@
 /**/        max-width: 50%;                                         /**/
 /**/        width: 48%;                                             /**/
 /**/    }                                                           /**/    
+/**/    img.photo:hover {                                           /**/                    
+/**/        opacity: 1;                                             /**/                
+/**/        transition: all 0.3s ease;                              /**/                                
+/**/    }                                                           /**/    
 /* ------------------------------------------------------------------ */
 
 iframe {
@@ -105,7 +109,9 @@ iframe {
 /**/        list-style: none;                                       /**/                             
 /**/        color: white;                                         /**/
 /**/        cursor: pointer;                                        /**/
-/**/    }                                                           /**/         
+/**/    }                                                           /**/  
+
+
 /**/                                                                /**/        
 /**/    header {                                                    /**/                
 /**/        width: 100%;                                            /**/                        
@@ -238,7 +244,14 @@ iframe {
 /**/        transform: rotate3d(0,0,1,-45deg) translate(0, -6.7px); /**/                                                                   
 /**/        transition: all 0.6s ease;                              /**/                                      
 /**/    }                                                           /**/         
-/**/                                                                /**/        
+/**/                                                                /**/ 
+.nav_links a:hover {
+    color:red;
+}
+
+.nav_links .current {
+    color:red;
+}
 /* ------------------------------------------------------------------ */
 
 /* ------------------------- LISTING PAGES -------------------------- */

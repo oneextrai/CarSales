@@ -50,15 +50,6 @@ rightArrow.addEventListener("click", () => {
 window.onload = updatePreview(1);
 
 /* -- FUNCTIONS -- */
-function updateCurrentPhoto(photo) {
-    mainPhoto.src = photo.src;
-    let old = document.querySelector(".selected");
-    if (old != undefined) {        
-        old.classList.remove("selected");
-    }
-    photo.classList.add("selected");
-}
-
 function updatePreview(pageNumber) {
     let old = previews.children;
     if (old.length > 1) {
@@ -79,4 +70,14 @@ function updatePreview(pageNumber) {
             previews.appendChild(newImg);
         }
     });
+}
+
+function updateCurrentPhoto(photo) {
+    mainPhoto.src = photo.src;
+
+    let old = document.querySelector(".selected");
+    if (old != undefined) {        
+        old.classList.remove("selected");
+    }
+    photo.classList.add("selected");
 }

@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="robots" content="all">
     <meta name="author" content="William Weir">
     <meta name="description" content="CarSales Luxury car landing page template.">
@@ -15,9 +15,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
     
 	{% if title %}
-    	<title>{{ title }} - CarSales</title>
+    	<title>{{ title }} - LuxuryGarage</title>
 	{% else %}
-    	<title>CarSales</title>
+    	<title>LuxuryGarage</title>
 	{% endif %}
 
     <link rel="stylesheet" href="{% static 'Sales/css/style.css' %}">
@@ -29,30 +29,78 @@
     <header class="navbar normal_header">
         <div class="left">
             <ul class="nav_links">
-                <li><a href="/">Modern</a></li>
+                {% if title == "Modern" %}
+                <li><a class="current" href="/modern">Modern</a></li>
+                {% else %}
+                <li><a href="/modern">Modern</a></li>
+                {% endif %}
+                {% if title == "Classic" %}
+                <li><a class="current" href="/classic">Classic</a></li>
+                {% else %}
                 <li><a href="/classic">Classic</a></li>
+                {% endif %}
+                {% if title == "All" %}
+                <li><a class="current" href="/all">All</a></li>
+                {% else %}
                 <li><a href="/all">All</a></li>
+                {% endif %}
             </ul>
         </div>
-        <a href="/" class="logo">CarSales</a>
+        <a href="/" class="logo">LuxuryGarage</a>
         <div class="right">
             <ul class="nav_links">
+                {% if title == "Our Mission" %}
+                <li><a class="current" href="/ourmission">Our Mission</a></li>
+                {% else %}
                 <li><a href="/ourmission">Our Mission</a></li>
+                {% endif %}
+                {% if title == "About" %}
+                <li><a href="/about" class="current">About</a></li>
+                {% else %}
                 <li><a href="/about">About</a></li>
+                {% endif %}
+                {% if title == "Contact Us" %}
+                <li><a class="current" href="/contact">Contact</a></li>
+                {% else %}
                 <li><a href="/contact">Contact</a></li>
+                {% endif %}
             </ul>
         </div>
     </header>
 
     <header class="navbar responsive_header">
-        <a href="/" class="logo">CarSales</a>
+        <a href="/" class="logo">LuxuryGarage</a>
         <ul class="nav_links">
-            <li><a href="/">Modern</a></li>
+            {% if title == "Modern" %}
+            <li><a class="current" href="/modern">Modern</a></li>
+            {% else %}
+            <li><a href="/modern">Modern</a></li>
+            {% endif %}
+            {% if title == "Classic" %}
+            <li><a class="current" href="/classic">Classic</a></li>
+            {% else %}
             <li><a href="/classic">Classic</a></li>
+            {% endif %}
+            {% if title == "All" %}
+            <li><a class="current" href="/all">All</a></li>
+            {% else %}
             <li><a href="/all">All</a></li>
+            {% endif %}
+            {% if title == "Our Mission" %}
+            <li><a class="current" href="/ourmission">Our Mission</a></li>
+            {% else %}
             <li><a href="/ourmission">Our Mission</a></li>
+            {% endif %}
+            {% if title == "About" %}
+            <li><a href="/about" class="current">About</a></li>
+            {% else %}
             <li><a href="/about">About</a></li>
+            {% endif %}
+            {% if title == "Contact Us" %}
+            <li><a class="current" href="/contact">Contact</a></li>
+            {% else %}
             <li><a href="/contact">Contact</a></li>
+            {% endif %}
         </ul>
         <div class="burger">
             <span></span>
@@ -75,7 +123,7 @@
     </div>
 
     <footer>
-        <p>COPYRIGHT © WILLIAM WEIR - <a target="_blank" href="https://github.com/oneextrai/CarSaleSite">GITHUB</a></p>
+        <p>COPYRIGHT © WILLIAM WEIR - <a target="_blank" href="https://github.com/oneextrai/CarSaleSite">TEMPLATE</a></p>
         <div class="socials">
             <div class="link">F</div>
             <div class="link">G+</div>

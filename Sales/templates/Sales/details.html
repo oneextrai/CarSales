@@ -9,12 +9,54 @@
     {% endfor %}
 </script>
 
-<a href="/" style="color:black;">Return to search</a>
+<div class="slideshows inactive">
+    <div class="full_screen_slideshow">
+        <div class="exit">
+            <span></span>
+            <span></span>
+        </div>
+        <div class="current_photo_full">
+            <div class="left_main arrow_full">PREV</div>
+            <img class="main_photo_full" src="{{ car.main_photo }}" alt="{{ car.make }}">
+            <div class="right_main arrow_full">NEXT</div>
+        </div>
+        <div class="shownext_full">
+            <div class="left_preview arrow"><</div>
+            <div class="previews_full"></div>
+            <div class="right_preview arrow">></div>
+        </div>
+    </div>
+    
+    <div class="responsive_slideshow_full">
+        <div class="exit">
+            <span></span>
+            <span></span>
+        </div>
+        <div class="current_photo_responsive_full">
+            <div class="prev">
+                <div class="left_res arrow_responsive_full"><</div>
+            </div>
+            <img class="res_photo_full" src="{{ car.main_photo }}" alt="{{ car.make }}">
+            <div class="next">
+                <div class="right_res arrow_responsive_full">></div>
+            </div>
+            <div class="numbers"></div>
+        </div>
+    </div>
+</div>
+
+
+
+{% if not car.is_classic %}
+<a href="/modern" style="color:black;">Return to search</a>
+{% else %}
+<a href="/classic" style="color:black;">Return to search</a>
+{% endif %}
 <h1>{{ car.title }}</h1>
 <div class="center">
     <div class="slideshow">
         <div class="current_photo">
-            <img class="main_photo" id="0" src="{{ car.main_photo }}" alt="{{ car.make }}">
+            <img class="main_photo" src="{{ car.main_photo }}" alt="{{ car.make }}">
         </div>
         <div class="shownext">
             <div class="left arrow"><</div>
@@ -57,8 +99,12 @@
         </div>
     </div>
 </div>
+
+
 {% endblock %} 
 
 {% block extra_scripts %}
 <script src="{% static 'Sales/js/details.js' %}"></script>
+<script src="{% static 'Sales/js/FullscreenSlideshow.js' %}"></script>
+<script src="{% static 'Sales/js/FullscreenResponsive.js' %}"></script>
 {% endblock %}

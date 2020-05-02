@@ -30,6 +30,7 @@ ALLOWED_HOSTS = ['192.168.1.103', '192.168.1.102','localhost','202.53.63.95']
 # Application definition
 
 INSTALLED_APPS = [
+	'Home.apps.HomeConfig',
 	'Classic.apps.ClassicConfig',
 	'All.apps.AllConfig',
 	'OurMission.apps.OurmissionConfig',

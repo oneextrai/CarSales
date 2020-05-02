@@ -30,7 +30,7 @@ def home(request):
         })
 
     context = {
-        'title':'Classic',
+        'title':'All',
         'cars':final_cars,
         'makes':makes,
         'header':'https://s1.1zoom.me/b5050/24/Lamborghini_441677_3840x2400.jpg',
